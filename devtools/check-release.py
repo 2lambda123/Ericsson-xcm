@@ -310,7 +310,7 @@ def check_changes(repo, release_commit):
 
 
 def run(cmd, exit_on_error=True):
-    res = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE,
+    res = subprocess.run(cmd, shell=False, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT, encoding='utf-8')
 
     if res.returncode != 0:
